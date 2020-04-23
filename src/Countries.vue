@@ -14,7 +14,7 @@
             </thead>
             <tbody>
                 <tr v-for="(country, index) in countries.Countries" :key=index>
-                    <td>{{countries.Countries[index].Country}}</td>
+                    <td><router-link v-bind:to="'/' + countries.Countries[index].CountryCode">{{countries.Countries[index].Country}}</router-link></td>
                     <td>{{countries.Countries[index].TotalConfirmed}}</td>
                     <td>{{countries.Countries[index].NewConfirmed}}</td>
                     <td>{{countries.Countries[index].TotalDeaths}}</td>
@@ -50,5 +50,5 @@ export default {
             });
         });
      }
-  }
+     }
 </script>
