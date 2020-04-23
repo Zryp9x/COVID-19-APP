@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+https://zryp9x.github.io/COVID-19-APP/
+
 ## Build Setup
 
 ``` bash
