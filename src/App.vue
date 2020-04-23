@@ -8,6 +8,7 @@
                   <router-link to="/countries">Państwa</router-link>
                   <router-link to="/info">Informacje</router-link>
                   <router-link to="/authors">Authors</router-link>
+                  <router-link to="/info/ES">Informacje</router-link>
               </div>
           </div>
       </nav>
