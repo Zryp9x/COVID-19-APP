@@ -1,6 +1,8 @@
 <template>
+
     <div>
-        <h1>{{countries[1].Country}}</h1>
+
+        <h1>{{$route.params.CountryCode}}</h1>
         <table id="countries" class="display">
         <thead>
             <tr>
@@ -23,7 +25,7 @@
 </template>
 
 <script>
-var country = "Poland";
+var countrycode = '{{$route.params.CountryCode}}';
 export default {
   data () {
     return {
@@ -31,7 +33,7 @@ export default {
     };
   },
     created: function() {
-      fetch("https://api.covid19api.com/country/" + country)
+      fetch("https://api.covid19api.com/country/" + countrycode)
       .then(response => response.json())
       .then((data) =>{
         this.countries = data;
