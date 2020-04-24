@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <nav class="navbar">
-        <img class="img" @click="$router.push('/')" src="COVID-19-APP/src/assets/COVID-19 APP.png"><br><br>
+        <img class="img" @click="$router.push('/')" src="/COVID-19-APP/src/assets/COVID-19 APP.png"><br><br>
         
         <button @click="$router.push('/countries')" type="button" class="btn btn-outline-dark">Państwa</button>
         
