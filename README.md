@@ -7,10 +7,10 @@ https://zryp9x.github.io/COVID-19-APP/
 ## Build Setup
 
 ``` bash
-#vue-route
+# install vue-route
 npm install vue-route
 
-#
+#webpack
 vue init webpack-simple
 
 # install dependencies
