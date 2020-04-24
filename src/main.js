@@ -17,11 +17,11 @@ import Authors from './Authors.vue';
 Vue.use(VueRouter);
 
 const routes = [
-    {path: '/', component: Home},
-    {path: '/countries', component: Countries},
-    {path: '/app', component: App},
-    {path: '/info/:CountryCode', component: Info},
-    {path: '/authors', component: Authors}
+    {path: '/COVID-19-APP/', component: Home},
+    {path: '/COVID-19-APP/countries', component: Countries},
+    {path: '/COVID-19-APP/app', component: App},
+    {path: '/COVID-19-APP/info/:CountryCode', component: Info},
+    {path: '/COVID-19-APP/authors', component: Authors}
 ];
 
 const router = new VueRouter({
