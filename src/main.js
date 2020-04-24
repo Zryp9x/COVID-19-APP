@@ -17,7 +17,7 @@ import Authors from './Authors.vue';
 Vue.use(VueRouter);
 
 const routes = [
-    {path: '/COVID-19-APP/', component: Home},
+    {path: '/', component: Home},
     {path: '/countries', component: Countries},
     {path: '/app', component: App},
     {path: '/info/:CountryCode', component: Info},
