@@ -5,9 +5,9 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
                   <router-link to="/COVID-19-APP/">Home</router-link>
-                  <router-link to="/COVID-19-APP/countries">Państwa</router-link>
-                  <router-link to="/COVID-19-APP/info">Informacje</router-link>
-                  <router-link to="/COVID-19-APP/authors">Authors</router-link>
+                  <router-link to="/countries">Państwa</router-link>
+                  <router-link to="/info">Informacje</router-link>
+                  <router-link to="/authors">Authors</router-link>
               </div>
           </div>
       </nav>
