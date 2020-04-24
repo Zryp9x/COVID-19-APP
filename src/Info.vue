@@ -2,7 +2,7 @@
 
     <div>
 
-        <h1>{{$route.params.CountryCode}}</h1>
+        <h1>{{countries[1].Country}}</h1>
         <table id="countries" class="display">
         <thead>
             <tr>
@@ -25,15 +25,16 @@
 </template>
 
 <script>
-var countrycode = '{{$route.params.CountryCode}}';
+var countrycode = "";
 export default {
   data () {
     return {
+      cc: this.$route.params.CountryCode,
       countries: []
     };
-  },
+    },
     created: function() {
-      fetch("https://api.covid19api.com/country/" + countrycode)
+      fetch("https://api.covid19api.com/country/" + this.cc)
       .then(response => response.json())
       .then((data) =>{
         this.countries = data;
