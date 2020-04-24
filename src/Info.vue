@@ -34,7 +34,7 @@ export default {
     };
     },
     created: function() {
-      fetch("https://api.covid19api.com/country/" + this.cc)
+      fetch("https://api.covid19api.com/total/dayone/country/" + this.cc)
       .then(response => response.json())
       .then((data) =>{
         this.countries = data;
