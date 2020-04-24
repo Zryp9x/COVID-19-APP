@@ -46,7 +46,8 @@ export default {
         $(document).ready(function(){
             $('#tab').DataTable({
                 "order": [[ 1, "desc" ]],
-                "scrollX": true
+                "scrollX": true,
+                "pageLength": 25
             });
         });
      }
