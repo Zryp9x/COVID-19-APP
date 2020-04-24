@@ -1,18 +1,16 @@
 <template>
   <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" to="/">COVID-19 APP</a>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                  <router-link to="/">Home</router-link>
-                  <router-link to="/countries">Państwa</router-link>
-                  <router-link to="/info">Informacje</router-link>
-                  <router-link to="/authors">Authors</router-link>
-              </div>
-          </div>
-      </nav>
-      <router-view>         
-      </router-view>
+    <nav class="navbar">
+        <img class="img" @click="$router.push('/')" src="./assets/COVID-19 APP.png"><br><br>
+        
+        <button @click="$router.push('/countries')" type="button" class="btn btn-outline-dark">Państwa</button>
+        
+        <button  @click="$router.push('/info')" type="button" class="btn btn-outline-dark">Informacje</button>
+        
+        <button  @click="$router.push('/authors')" type="button" class="btn btn-outline-dark">Authors</button>
+        <br><br>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
