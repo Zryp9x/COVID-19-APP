@@ -14,3 +14,13 @@
     text-align: center;
 }
 
+.navbar {
+    align-items: center;
+}
+
+.img {
+    align-items: center;
+    max-width:100%;
+    height:auto;
+}
+
