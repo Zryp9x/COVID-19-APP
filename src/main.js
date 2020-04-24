@@ -20,7 +20,7 @@ const routes = [
     {path: '/', component: Home},
     {path: '/countries', component: Countries},
     {path: '/app', component: App},
-    {path: '/:CountryCode', component: Info},
+    {path: '/info/:CountryCode', component: Info},
     {path: '/authors', component: Authors}
 ];
 
