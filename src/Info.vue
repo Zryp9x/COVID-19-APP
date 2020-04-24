@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div class="container">
 
         <h1>{{countries[1].Country}}</h1>
         <table id="countries" class="display">
@@ -44,7 +44,9 @@ export default {
       $(document).ready(function(){
           $('#countries').DataTable({
               "order": [[ 0, "desc" ]],
-              "responsive": true
+              "responsive": true,
+              "scrollX": false,
+              "pageLength": 25
           });
       });
     }
