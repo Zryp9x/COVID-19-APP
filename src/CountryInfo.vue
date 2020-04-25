@@ -1,0 +1,119 @@
+<template>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h1 class="text-center">{{countries[1].Country}}</h1><br>
+            </div>
+            <div class="col-md-6">
+                <h4 class="dataText">Łącznie zakażeń:</h4>
+                <p class="data">{{countries[(countries.length)-1].Confirmed}}</p>
+                <h4 class="dataText">Łącznie zgonów:</h4>
+                <p class="data">{{countries[(countries.length)-1].Deaths}}</p>
+                <h4 class="dataText">Łącznie wyzdrowień:</h4>
+                <p class="data">{{countries[(countries.length)-1].Recovered}}</p>
+            </div>
+        </div>
+        <!-- CONFIRMED-->
+        <div class="row mt-5" v-if="arrConfirmed.length > 0">
+            <div class="col">
+                <h2 class="text-center">Confirmed</h2>
+                <line-chart
+                :chartData="arrConfirmed"
+                :options="chartOptions"
+                :chartColors="confirmedChartColors"
+                label="Confirmed"
+                />
+            </div>
+        </div>
+
+        <!-- DEATHS-->
+        <div class="row mt-5" v-if="arrDeaths.length > 0">
+            <div class="col">
+                <h2 class="text-center">Deaths</h2>
+                <line-chart
+                  :chartData="arrDeaths"
+                  :options="chartOptions"
+                  :chartColors="deathsChartColors"
+                  label="Deaths"
+                />
+            </div>
+        </div>
+
+        <!-- RECOVERED-->
+        <div class="row mt-5" v-if="arrRecovered.length > 0">
+            <div class="col">
+                <h2 class="text-center">Recovered</h2>
+                <line-chart
+                  :chartData="arrRecovered"
+                  :options="chartOptions"
+                  :chartColors="recoveredChartColors"
+                  label="Recovered"
+                />
+            </div>
+        </div>
+  </div>
+</template>
+
+<script>
+import regeneratorRuntime from "regenerator-runtime";
+import axios from "axios";
+import moment from "moment";
+import LineChart from "./LineChart";
+export default {
+  components: {
+    LineChart
+  },
+  data() {
+    return {
+      cc: this.$route.params.CountryCode,
+      countries: [],
+      arrConfirmed: [],
+      confirmedChartColors: {
+        borderColor: "#077187",
+        pointBorderColor: "#0E1428",
+        pointBackgroundColor: "#AFD6AC",
+        backgroundColor: "#74A57F"
+      },
+      arrRecovered: [],
+      recoveredChartColors: {
+        borderColor: "#4E5E66",
+        pointBorderColor: "#4E5E66",
+        pointBackgroundColor: "#31E981",
+        backgroundColor: "#31E981"
+      },
+      arrDeaths: [],
+      deathsChartColors: {
+        borderColor: "#E06D06",
+        pointBorderColor: "#E06D06",
+        pointBackgroundColor: "#402A2C",
+        backgroundColor: "#402A2C"
+      },
+      chartOptions: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    };
+  },
+  async created() {
+    const { data } = await axios.get("https://api.covid19api.com/total/dayone/country/" + this.cc);
+    data.forEach(d => {
+      const Date = moment(d.Date, "").format("MM/DD");
+      const {
+        Confirmed,
+        Deaths,
+        Recovered
+      } = d;
+      this.arrConfirmed.push({ Date, Country: Confirmed });
+      this.arrRecovered.push({ Date, Country: Recovered });
+      this.arrDeaths.push({ Date, Country: Deaths });
+    })
+  },
+  mounted: function() {
+      fetch("https://api.covid19api.com/total/dayone/country/" + this.cc)
+      .then(response => response.json())
+      .then((data) =>{
+        this.countries = data;
+      })
+    },
+};
+</script>
