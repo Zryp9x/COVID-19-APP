@@ -12,6 +12,7 @@ import App from './App.vue';
 import Countries from './Countries.vue';
 import Home from './Home.vue';
 import Info from './Info.vue';
+import CountryInfo from './CountryInfo.vue';
 import Authors from './Authors.vue';
 
 Vue.use(VueRouter);
@@ -20,7 +21,8 @@ const routes = [
     {path: '/', component: Home},
     {path: '/countries', component: Countries},
     {path: '/app', component: App},
-    {path: '/info/:CountryCode', component: Info},
+    {path: '/CountryInfo/:CountryCode', component: CountryInfo},
+    {path: '/info', component: Info},
     {path: '/authors', component: Authors}
 ];
 
