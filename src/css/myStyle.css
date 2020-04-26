@@ -4,6 +4,9 @@
     font-weight: bold;
     text-align: center;
   }
+  body{
+      padding:0px;
+  }
 
 /*.bg {
     background-color: rgb(56, 56, 56);
