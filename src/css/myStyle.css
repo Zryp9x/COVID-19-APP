@@ -24,3 +24,12 @@
     height:auto;
 }
 
+.texth {
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+body {
+    background-color: lightslategray;
+}
