@@ -3,6 +3,7 @@
         <div class="row mt-5">
             <div class="col-md-6">
                 <h1 class="text-center">{{countries[1].Country}}</h1><br>
+                <img src ="" id="flag">
             </div>
             <div class="col-md-6">
                 <h4 class="dataText">Total confirmed:</h4>
@@ -115,5 +116,8 @@ export default {
         this.countries = data;
       })
     },
+  updated: function() {
+      document.getElementById('flag').src = "https://www.countryflags.io/" + this.cc + "/flat/64.png";
+    }
 };
 </script>
