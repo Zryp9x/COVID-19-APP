@@ -5,18 +5,18 @@
                 <h1 class="text-center">{{countries[1].Country}}</h1><br>
             </div>
             <div class="col-md-6">
-                <h4 class="dataText">Łącznie zakażeń:</h4>
+                <h4 class="dataText">Total confirmed:</h4>
                 <p class="data">{{countries[(countries.length)-1].Confirmed}}</p>
-                <h4 class="dataText">Łącznie zgonów:</h4>
+                <h4 class="dataText">Total deaths:</h4>
                 <p class="data">{{countries[(countries.length)-1].Deaths}}</p>
-                <h4 class="dataText">Łącznie wyzdrowień:</h4>
+                <h4 class="dataText">Total recovered:</h4>
                 <p class="data">{{countries[(countries.length)-1].Recovered}}</p>
             </div>
         </div>
         <!-- CONFIRMED-->
         <div class="row mt-5" v-if="arrConfirmed.length > 0">
             <div class="col">
-                <h2 class="text-center">Confirmed</h2>
+                <h2 class="text-center">Confirmed cases</h2>
                 <line-chart
                 :chartData="arrConfirmed"
                 :options="chartOptions"
