@@ -1,15 +1,17 @@
 <template>
         <div>
+          <h2 class="texth">Current country data all around the world!</h2>
+          <h3 class="texth">Click on country name to see specified data for each country.</h3><br><br>
         <table id="tab" class="display">
             <thead>
                 <tr>
-                    <th>Kraj</th>
-                    <th>Łącznie zakażeń</th>
-                    <th>Nowe zakażenia</th>
-                    <th>Łącznie zgonów</th>
-                    <th>Nowe zgony</th>
-                    <th>Łącznie wyzdrowień</th>
-                    <th>Nowe wyzdrowienia</th>
+                    <th>Country</th>
+                    <th>Total confirmed</th>
+                    <th>New confirmed</th>
+                    <th>Total deaths</th>
+                    <th>New deaths</th>
+                    <th>Total recovered</th>
+                    <th>New recovered</th>
                 </tr>
             </thead>
             <tbody>
