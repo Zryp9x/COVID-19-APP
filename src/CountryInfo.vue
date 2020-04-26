@@ -3,7 +3,7 @@
         <div class="row mt-5">
             <div class="col-md-6">
                 <h1 class="text-center">{{countries[1].Country}}</h1><br>
-                <img src ="" id="flag">
+                <img src ="" id="flag" class="rounded mx-auto d-block" width="100px">
             </div>
             <div class="col-md-6">
                 <h4 class="dataText">Total confirmed:</h4>
