@@ -1,19 +1,19 @@
 <template>
     <div class="row">
           <div class="col-md-6">
-              <h4 class="dataText">Łącznie zakażeń:</h4>
+              <h4 class="dataText">Total confirmed:</h4>
               <p class="data">{{countries.Global.TotalConfirmed}}</p>
-              <h4 class="dataText">Łącznie zgonów:</h4>
+              <h4 class="dataText">Total deaths:</h4>
               <p class="data">{{countries.Global.TotalDeaths}}</p>
-              <h4 class="dataText">Łącznie wyzdrowień:</h4>
+              <h4 class="dataText">Total recovered:</h4>
               <p class="data">{{countries.Global.TotalRecovered}}</p>
           </div>
           <div class="col-md-6">
-              <h4 class="dataText">Nowe zakażenia:</h4>
+              <h4 class="dataText">New confirmed:</h4>
               <p class="data">{{countries.Global.NewConfirmed}}</p>
-              <h4 class="dataText">Nowe zgony:</h4>
+              <h4 class="dataText">New deaths:</h4>
               <p class="data">{{countries.Global.NewDeaths}}</p>
-              <h4 class="dataText">Nowe wyzdrowienia:</h4>
+              <h4 class="dataText">New recovered:</h4>
               <p class="data">{{countries.Global.NewRecovered}}</p>
           </div>
       </div>
