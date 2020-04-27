@@ -7,11 +7,11 @@
             </div>
             <div class="col-md-6">
                 <h4 class="dataText">Total confirmed:</h4>
-                <p class="data">{{countries[(countries.length)-1].Confirmed}} <img class="img" src="src/css/img/virus.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
+                <p class="data">{{countries[(countries.length)-1].Confirmed}} <img class="img" src="https://www.zovirax.pl/images/el1.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
                 <h4 class="dataText">Total deaths:</h4>
-                <p class="data">{{countries[(countries.length)-1].Deaths}} <img class="img" src="src/css/img/cross.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
+                <p class="data">{{countries[(countries.length)-1].Deaths}} <img class="img" src="https://pngimage.net/wp-content/uploads/2018/05/christian-cross-png-6.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
                 <h4 class="dataText">Total recovered:</h4>
-                <p class="data">{{countries[(countries.length)-1].Recovered}} <img class="img" src="src/css/img/heart.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
+                <p class="data">{{countries[(countries.length)-1].Recovered}} <img class="img" src="https://data3.cupsell.pl/upload/generator/183511/640x420/2915072_print_1.png?resize=max_sizes&key=55f9a22768eed085006592c1174c0235" width="40px" height="40px" style="margin-bottom:10px;"></p>
             </div>
         </div>
         <!-- CONFIRMED-->
