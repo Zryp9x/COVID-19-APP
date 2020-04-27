@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <div class="row mt-5">
+        <div class="row mt-5" style="margin-top:0 !important;">
             <div class="col-md-6">
-                <h1 class="text-center">{{countries[1].Country}}</h1><br>
-                <img src ="" id="flag" class="rounded mx-auto d-block" width="100px">
+                <h1 class="text-center">{{countries[1].Country}}</h1>
+                <img src ="" id="flag" class="rounded mx-auto d-block" width="100px" style="margin-bottom:40px;">
             </div>
             <div class="col-md-6">
                 <h4 class="dataText">Total confirmed:</h4>
