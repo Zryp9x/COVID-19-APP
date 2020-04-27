@@ -7,11 +7,11 @@
             </div>
             <div class="col-md-6">
                 <h4 class="dataText">Total confirmed:</h4>
-                <p class="data">{{countries[(countries.length)-1].Confirmed}} <img class="img" src="src/css/img/virus.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
+                <p class="data">{{countries[(countries.length)-1].Confirmed}} <img class="img" src="css/img/virus.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
                 <h4 class="dataText">Total deaths:</h4>
-                <p class="data">{{countries[(countries.length)-1].Deaths}} <img class="img" src="src/css/img/cross.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
+                <p class="data">{{countries[(countries.length)-1].Deaths}} <img class="img" src="css/img/cross.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
                 <h4 class="dataText">Total recovered:</h4>
-                <p class="data">{{countries[(countries.length)-1].Recovered}} <img class="img" src="src/css/img/heart.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
+                <p class="data">{{countries[(countries.length)-1].Recovered}} <img class="img" src="css/img/heart.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
             </div>
         </div>
         <!-- CONFIRMED-->
