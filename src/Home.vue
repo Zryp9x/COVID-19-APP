@@ -6,7 +6,7 @@
               <h4 class="dataText">Total deaths:</h4>
               <p class="data">{{countries.Global.TotalDeaths}} <img class="img" src="src/css/img/cross.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
               <h4 class="dataText">Total recovered:</h4>
-              <p class="data">{{countries.Global.TotalRecovered}} <img class="img" src="src/css/img/heart.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
+              <p class="data">{{countries.Global.TotalRecovered}} <img class="img" src="https://data3.cupsell.pl/upload/generator/183511/640x420/2915072_print_1.png?resize=max_sizes&key=55f9a22768eed085006592c1174c0235" width="40px" height="40px" style="margin-bottom:10px;"></p>
           </div>
           <div class="col-md-6">
               <h4 class="dataText">New confirmed:</h4>
@@ -14,7 +14,7 @@
               <h4 class="dataText">New deaths:</h4>
               <p class="data">{{countries.Global.NewDeaths}} <img class="img" src="src/css/img/cross.png" width="40px" height="35px" style="margin-bottom:10px;"></p>
               <h4 class="dataText">New recovered:</h4>
-              <p class="data">{{countries.Global.NewRecovered}} <img class="img" src="src/css/img/heart.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
+              <p class="data">{{countries.Global.NewRecovered}} <img class="img" src="https://data3.cupsell.pl/upload/generator/183511/640x420/2915072_print_1.png?resize=max_sizes&key=55f9a22768eed085006592c1174c0235" width="40px" height="40px" style="margin-bottom:10px;"></p>
           </div>
       </div>
 </template>
