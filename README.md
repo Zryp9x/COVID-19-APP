@@ -24,4 +24,4 @@ npm run dev
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Install necessary files
-npm i regenerator-runtime axios moment vue-chartjs
+npm i regenerator-runtime axios moment vue-chartjs mdbvue xml-js
