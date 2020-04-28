@@ -1,9 +1,19 @@
 <template>
     <div>
+        <div id="basicinfo">
+            <h3>Basic protective measures against the new coronavirus</h3>
+            <p>Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority. Most people who become infected experience mild illness and recover, but it can be more severe for others. Take care of your health and protect others by doing the following:</p>
+        </div>
+        <div id="maskinstruction">
+          <hr>
+        </div>
+        <div id="mythbusters">
+          <hr>
+          <h3>Myth busters</h3><br>
+        </div><br>
         <h1>General informations about COVID-19</h1>
-        <mdb-carousel :interval="6000" controlls indicators slide :items="items"></mdb-carousel>
-        <h4>Wash your hands frequently</h4>
-        <p>Regular washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands.</p>
+        <mdb-carousel :interval="6000" controlls indicators slide :items="items"></mdb-carousel><br>
+
     </div>
 </template>
 <script>
@@ -49,6 +59,73 @@
           }
         ]
       };
+    },
+    created() {
+            // Your web app's Firebase configuration
+      var firebaseConfig = {
+    apiKey: "AIzaSyClkwCZ-EnLPpSdGqXK4hRQg717-l2Nb-4",
+    authDomain: "covid19app-f3bc5.firebaseapp.com",
+    databaseURL: "https://covid19app-f3bc5.firebaseio.com",
+    projectId: "covid19app-f3bc5",
+    storageBucket: "covid19app-f3bc5.appspot.com",
+    messagingSenderId: "657218952223",
+    appId: "1:657218952223:web:55f456ad9d7651d808492a",
+    measurementId: "G-LXHTGGJ7WP"
+  };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+
+      db.collection("news")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((doc) => {
+        function renderElements(doc) {
+        let title = doc.data().title;
+        let content = doc.data().content;
+
+        document.getElementById('basicinfo').innerHTML +=
+          title +
+          content +
+          "<br>";
+      }
+            renderElements(doc);
+          });
+        });
+
+        db.collection("maskinstruction")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((doc) => {
+        function renderElements(doc) {
+        let title = doc.data().title;
+        let instruction = doc.data().instruction;
+
+        document.getElementById('maskinstruction').innerHTML +=
+          title + 
+          instruction +
+          "<br>";
+      }
+            renderElements(doc);
+          });
+        });
+
+        db.collection("mythbusters")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((doc) => {
+        function renderElements(doc) {
+        let title = doc.data().title;
+        let content = doc.data().content;
+
+        document.getElementById('mythbusters').innerHTML +=
+          title  + 
+          content +
+          "<br>";
+      }
+            renderElements(doc);
+          });
+        });
     }
   };
 </script>
