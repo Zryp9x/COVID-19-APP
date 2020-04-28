@@ -16,7 +16,7 @@
             </thead>
             <tbody>
                 <tr v-for="(country, index) in countries.Countries" :key=index>
-                    <td><router-link v-bind:to="'/CountryInfo/' + countries.Countries[index].CountryCode">{{countries.Countries[index].Country}}</router-link></td>
+                    <td><router-link v-bind:to="'/CountryInfo/' + countries.Countries[index].CountryCode">{{countries.Countries[index].Country}} <img class="img" v-bind:src="'https://www.countryflags.io/' + countries.Countries[index].CountryCode + '/flat/24.png'"></router-link></td>
                     <td>{{countries.Countries[index].TotalConfirmed}}</td>
                     <td>{{countries.Countries[index].NewConfirmed}}</td>
                     <td>{{countries.Countries[index].TotalDeaths}}</td>
