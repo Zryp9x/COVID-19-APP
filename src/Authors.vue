@@ -1,13 +1,13 @@
 <template>
         <div>
             <h2 class="texth">NEWS</h2>
-            <p>{{news.rss.channel[0].title[0]}}</p>
-            <p>{{news.rss.channel[0].link[0]}}</p>
-            <p>{{news.rss.channel[0].description[0]}}</p>
-            <p>{{news.rss.channel[0].item[0].title[0]}}</p>
-            <p>{{news.rss.channel[0].item[0].description[0]}}</p>
-            <p>{{news.rss.channel[0].item[0].link[0]}}</p>
-            <p>{{news.rss.channel[0].item[0].pubDate[0]}}</p>
+            <div v-for="(item, index) in news.rss.channel[0].item" :key=index>  
+                <h2>{{news.rss.channel[0].item[index].title[0]}}</h2>
+                <p>{{news.rss.channel[0].item[index].description[0]}}</p>
+                <p>{{news.rss.channel[0].item[index].link[0]}}</p>
+                <p>{{news.rss.channel[0].item[index].pubDate[0]}}</p>
+                <hr><hr><hr><hr><hr>
+            </div>
     </div>
 </template>
 
