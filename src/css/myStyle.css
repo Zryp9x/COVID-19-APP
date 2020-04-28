@@ -1,8 +1,11 @@
 .data {
-    font-size: 36px;
+    font-size: 45px;
     color: tomato;
     font-weight: bold;
     text-align: center;
+  }
+  body{
+      padding:0px;
   }
 
 /*.bg {
@@ -11,6 +14,7 @@
 
 .dataText {
     /*color: rgb(255, 255, 255);*/
+    font-size: 35px;
     text-align: center;
 }
 
@@ -33,3 +37,4 @@
 body {
     background-color: lightslategray;
 }
+
