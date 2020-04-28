@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <nav class="navbar-brand">
-        <img class="img" @click="$router.push('/').catch(err =>{})" src="https://img.icons8.com/nolan/64/coronavirus.png" style="margin-right:10px;">
+    <nav class="navbar">
+        <img class="img" @click="$router.push('/').catch(err =>{})" src="https://img.icons8.com/nolan/64/coronavirus.png"><br><br>
         <button @click="$router.push('/countries').catch(err =>{})" type="button" class="btn btn-outline-dark">Countries</button>
         <button  @click="$router.push('/info').catch(err =>{})" type="button" class="btn btn-outline-dark">Info</button>
         <button  @click="$router.push('/authors').catch(err =>{})" type="button" class="btn btn-outline-dark">Authors</button>
