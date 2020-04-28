@@ -1,15 +1,13 @@
 <template>
     <div>
         <div id="basicinfo">
-            <h3>Basic protective measures against the new coronavirus</h3>
+            <h2>Basic protective measures against the new coronavirus</h2>
             <p>Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority. Most people who become infected experience mild illness and recover, but it can be more severe for others. Take care of your health and protect others by doing the following:</p>
         </div>
         <div id="maskinstruction">
-          <hr>
         </div>
         <div id="mythbusters">
-          <hr>
-          <h3>Myth busters</h3><br>
+          <h2>Myth busters:</h2><br>
         </div><br>
         <h1>General informations about COVID-19</h1>
         <mdb-carousel :interval="6000" controlls indicators slide :items="items"></mdb-carousel><br>
