@@ -1,33 +1,24 @@
 <template>
-        <div>
-            <h2 class="texth">NEWS</h2>
-            <div v-for="(item, index) in news.rss.channel[0].item" :key=index>  
-                <h2>{{news.rss.channel[0].item[index].title[0]}}</h2>
-                <div>{{news.rss.channel[0].item[index].description[0]}}</div>
-                <p>{{news.rss.channel[0].item[index].link[0]}}</p>
-                <p>{{news.rss.channel[0].item[index].pubDate[0]}}</p>
-                <hr><hr><hr><hr><hr>
-            </div>
-    </div>
+  <div>
+    <h1>About us</h1>
+    <h2>COVID-19-APP is application made by students as a project for university subjects:</h2>
+    <ul>
+      <li>Single Page Application Programming</li>
+      <li>Mobile Systems Programming</li>
+    </ul>
+    <p>Sources used in this project:</p>
+    <ul>
+      <li><a href="https://api.covid19api.com/">https://api.covid19api.com/</a></li>
+      <li><a href="https://www.countryflags.io/">https://www.countryflags.io/</a></li>
+      <li><a href="https://tools.cdc.gov/api/v2/resources/media/132608.rss">https://tools.cdc.gov/api/v2/resources/media/132608.rss</a></li>
+      <li><a href="https://twitrss.me/twitter_user_to_rss/?user=AlrtCoronaVirus">https://twitrss.me/twitter_user_to_rss/?user=AlrtCoronaVirus</a></li>
+    </ul>
+  </div>
+
 </template>
 
 <script>
-import axios from "axios";
-var parseString = require('xml2js').parseString;
 export default {
-  data () {
-    return {
-      news: []
-    };
-  },
-    created: function() {
-        axios.get('https://www.who.int/feeds/entity/csr/don/en/rss.xml')
-        .then(response => {
-            var self = this; 
-            parseString(response.data, function (err, result) {
-            self.news = result
-            });        
-        })
-    }
-  }
+  
+}
 </script>
