@@ -1,5 +1,6 @@
 <template>
     <div>
+                        <logout></logout>
         <div id="basicinfo">
             <h2>Basic protective measures against the new coronavirus</h2>
             <p>Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority. Most people who become infected experience mild illness and recover, but it can be more severe for others. Take care of your health and protect others by doing the following:</p>
@@ -16,11 +17,13 @@
 </template>
 <script>
   import { mdbCarousel } from "mdbvue";
+  import Logout from './Logout';
   export default {
     name: "CarouselPage",
     components: {
       mdbCarousel
     },
+        components: {'logout': Logout},
     data() {
       return {
         items: [

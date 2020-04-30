@@ -1,4 +1,6 @@
 <template>
+<div>
+            <logout></logout>
         <div class="row">
           <div class="border border-danger rounded col-md-6">
             <h2 style="text-align: center">CDC Online Newsroom</h2>
@@ -22,10 +24,13 @@
             </div>
           </div>
         </div>
+</div>
 </template>
 
 <script>
 import axios from "axios";
+import regeneratorRuntime from "regenerator-runtime";
+import Logout from './Logout';
 var parseString = require('xml2js').parseString;
 export default {
   data () {
@@ -34,6 +39,7 @@ export default {
       news:[]
     };
   },
+        components: {'logout': Logout},
     created: function() {
         axios.get('https://tools.cdc.gov/api/v2/resources/media/132608.rss')
         .then(response => {

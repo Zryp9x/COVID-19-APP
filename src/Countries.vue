@@ -38,7 +38,7 @@
 import regeneratorRuntime from "regenerator-runtime";
 import Logout from './Logout';
 export default {
-  components: {'logout': Logout},
+      components: {'logout': Logout},
   data () {
     return {
       countries: []
