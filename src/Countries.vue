@@ -4,25 +4,28 @@
           <h3 class="texth">Click on country name to see specified data for each country.</h3><br><br>
         <table id="tab" class="display">
             <thead>
-                <tr>
-                    <th>Country</th>
-                    <th>Total confirmed</th>
-                    <th>New confirmed</th>
-                    <th>Total deaths</th>
-                    <th>New deaths</th>
-                    <th>Total recovered</th>
-                    <th>New recovered</th>
+                <tr scope="row">
+                    <th scope="col">Country</th>
+                    <th scope="col">Total confirmed</th>
+                    <th scope="col">New confirmed</th>
+                    <th scope="col">Total deaths</th>
+                    <th scope="col">New deaths</th>
+                    <th scope="col">Total recovered</th>
+                    <th scope="col">New recovered</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(country, index) in countries.Countries" :key=index>
-                    <td><router-link v-bind:to="'/CountryInfo/' + countries.Countries[index].CountryCode">{{countries.Countries[index].Country}} <img class="img" v-bind:src="'https://www.countryflags.io/' + countries.Countries[index].CountryCode + '/flat/24.png'"></router-link></td>
-                    <td>{{countries.Countries[index].TotalConfirmed}}</td>
-                    <td>{{countries.Countries[index].NewConfirmed}}</td>
-                    <td>{{countries.Countries[index].TotalDeaths}}</td>
-                    <td>{{countries.Countries[index].NewDeaths}}</td>
-                    <td>{{countries.Countries[index].TotalRecovered}}</td>
-                    <td>{{countries.Countries[index].NewRecovered}}</td>
+                <tr scope="row" v-for="(country, index) in countries.Countries" :key=index>
+                    <td scope="col">
+                      <img class="img" v-bind:src="'https://www.countryflags.io/' + countries.Countries[index].CountryCode + '/flat/24.png'"> 
+                      <router-link v-bind:to="'/CountryInfo/' + countries.Countries[index].CountryCode">{{countries.Countries[index].Country}}</router-link>
+                    </td>
+                    <td scope="col">{{countries.Countries[index].TotalConfirmed}}</td>
+                    <td scope="col">{{countries.Countries[index].NewConfirmed}}</td>
+                    <td scope="col">{{countries.Countries[index].TotalDeaths}}</td>
+                    <td scope="col">{{countries.Countries[index].NewDeaths}}</td>
+                    <td scope="col">{{countries.Countries[index].TotalRecovered}}</td>
+                    <td scope="col">{{countries.Countries[index].NewRecovered}}</td>
                 </tr>
             </tbody>
         </table>
