@@ -3,7 +3,7 @@
             <h2 class="texth">NEWS</h2>
             <div v-for="(item, index) in news.rss.channel[0].item" :key=index>  
                 <h2>{{news.rss.channel[0].item[index].title[0]}}</h2>
-                <p>{{news.rss.channel[0].item[index].description[0]}}</p>
+                <div>{{news.rss.channel[0].item[index].description[0]}}</div>
                 <p>{{news.rss.channel[0].item[index].link[0]}}</p>
                 <p>{{news.rss.channel[0].item[index].pubDate[0]}}</p>
                 <hr><hr><hr><hr><hr>
@@ -21,7 +21,7 @@ export default {
     };
   },
     created: function() {
-        axios.get('https://www.who.int/rss-feeds/news-english.xml')
+        axios.get('https://www.who.int/feeds/entity/csr/don/en/rss.xml')
         .then(response => {
             var self = this; 
             parseString(response.data, function (err, result) {
