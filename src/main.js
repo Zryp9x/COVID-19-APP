@@ -12,6 +12,7 @@ import App from './App.vue';
 import Countries from './Countries.vue';
 import Home from './Home.vue';
 import Info from './Info.vue';
+import Authors from './Authors.vue';
 import CountryInfo from './CountryInfo.vue';
 import News from './News.vue';
 import axios from "axios";
@@ -43,6 +44,7 @@ const routes = [
     {path: '/', name:'home', component: Home},
     {path: '/countries', name:'countries', component: Countries, meta: { requiresAuth: true }},
     {path: '/app', component: App, meta: { requiresAuth: true }},
+    {path: '/authors', component: Authors},
     {path: '/CountryInfo/:CountryCode', component: CountryInfo},
     {path: '/info', component: Info, meta: { requiresAuth: true }},
     {path: '/news', component: News, meta: { requiresAuth: true }},
