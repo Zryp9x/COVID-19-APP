@@ -34,20 +34,21 @@
 </template>
 
 <script>
+import regeneratorRuntime from "regenerator-runtime";
 export default {
   data () {
     return {
       countries: []
     };
   },
-    created: function() {
+    async created() {
       fetch("https://api.covid19api.com/summary")
       .then(response => response.json())
       .then((data) =>{
         this.countries = data;
       })
     },
-     updated () {
+     async updated () {
         $(document).ready(function(){
             $('#tab').DataTable({
                 "order": [[ 1, "desc" ]],
