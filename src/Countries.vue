@@ -1,5 +1,6 @@
 <template>
         <div>
+                  <logout></logout>
           <h2 class="texth">Current country data all around the world!</h2>
           <h3 class="texth">Click on country name to see specified data for each country.</h3><br><br>
         <table id="tab" class="display">
@@ -35,7 +36,9 @@
 
 <script>
 import regeneratorRuntime from "regenerator-runtime";
+import Logout from './Logout';
 export default {
+  components: {'logout': Logout},
   data () {
     return {
       countries: []
