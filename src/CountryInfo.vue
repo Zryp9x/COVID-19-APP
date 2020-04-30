@@ -110,7 +110,7 @@ export default {
     })
   },
   mounted: function() {
-      fetch("https://api.covid19api.com/total/dayone/country/" + this.cc)
+      fetch("https://api.covid19api.com/total/country/" + this.cc)
       .then(response => response.json())
       .then((data) =>{
         this.countries = data;
