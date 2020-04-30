@@ -96,7 +96,7 @@ export default {
     };
   },
   async created() {
-    const { data } = await axios.get("https://api.covid19api.com/total/dayone/country/" + this.cc);
+    const { data } = await axios.get("https://api.covid19api.com/total/country/" + this.cc);
     data.forEach(d => {
       const Date = moment(d.Date, "").format("MM/DD");
       const {
