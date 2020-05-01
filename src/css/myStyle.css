@@ -106,8 +106,8 @@ body {
   .header .menu-icon {
     cursor: pointer;
     display: inline-block;
-    float: right;
     padding: 28px 20px;
+    float: right;
     position: relative;
     user-select: none;
   }
@@ -217,4 +217,4 @@ body {
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #8a8a8a; 
+    background: #8a8a8a;

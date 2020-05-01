@@ -7,6 +7,9 @@
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu"> 
+           <li> 
+            <a @click="$router.push('/home').catch(err =>{})" v-if="this.$route.path !== '/' && this.$route.path !== '/signup'">Home</a>
+          </li>
           <li> 
             <a @click="$router.push('/countries').catch(err =>{})" v-if="this.$route.path !== '/' && this.$route.path !== '/signup'">Countries</a>
           </li>
