@@ -39,6 +39,6 @@
 
 import Logout from './Logout';
 export default {
-        components: {'logout': Logout},
+        components: {'logout': Logout}
 }
 </script>
