@@ -1,8 +1,8 @@
 <template>
-  <div>
+    <div class="row">
     <div class="error" v-if="error">{{error.message}}</div>
     <form @submit.prevent="pressed">
-      Register
+            <h3>Register</h3>
       <div class="email">
         <input type="email" v-model="email" placeholder="email" />
       </div>

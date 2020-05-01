@@ -1,7 +1,7 @@
 <template>
     <div class="row">
-            <h3>Login</h3>
             <form @submit.prevent="pressed">
+            <h3>Login</h3>
             <div class="login">
             <input type="text" placeholder="login" v-model="email" />
             </div>
@@ -34,7 +34,7 @@ export default {
         .signInWithEmailAndPassword(this.email, this.password)
         .then(data => {
           console.log(data);
-          this.$router.replace({ name: "countries" });
+          this.$router.replace({ name: "home" });
         })
         .catch(error => {
           this.error = error;

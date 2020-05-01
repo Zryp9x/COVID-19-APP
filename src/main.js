@@ -50,7 +50,7 @@ const routes = [
     {path: '/CountryInfo/:CountryCode', component: CountryInfo, meta: { requiresAuth: true }},
     {path: '/info', component: Info, meta: { requiresAuth: true }},
     {path: '/news', component: News, meta: { requiresAuth: true }},
-    {path: '/register', name:'register', component: Register},
+    {path: '/register', name:'register', component: Register, meta: { requiresAuth: false }},
     {path: '/logout', name:'logout', component: Logout}
 ];
 
@@ -66,6 +66,17 @@ router.beforeEach((to, from, next) => {
     console.log("isauthenticated", isAuthenticated);
     if (requiresAuth && !isAuthenticated) {
       next("/");
+    } else {
+      next();
+    }
+  });
+
+  router.beforeEach((to, from, next) => {
+    const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+    const isAuthenticated = firebase.auth().currentUser;
+    console.log("isauthenticated", isAuthenticated);
+    if (!requiresAuth && isAuthenticated) {
+      next("/home");
     } else {
       next();
     }

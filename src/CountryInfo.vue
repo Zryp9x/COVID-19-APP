@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-              <logout></logout> 
         <div class="row mt-5" style="margin-top:0 !important;">
             <div class="col-md-6">
                 <h1 class="text-center">{{countries[1].Country}}</h1>
@@ -61,7 +60,6 @@ import regeneratorRuntime from "regenerator-runtime";
 import axios from "axios";
 import moment from "moment";
 import LineChart from "./LineChart";
-import Logout from './Logout';
 export default {
   components: {
     LineChart
@@ -97,7 +95,6 @@ export default {
       }
     };
   },
-        components: {'logout': Logout},
   async created() {
     const { data } = await axios.get("https://api.covid19api.com/total/country/" + this.cc);
     data.forEach(d => {
