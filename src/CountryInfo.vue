@@ -118,6 +118,8 @@ export default {
     },
   updated: function() {
       document.getElementById('flag').src = "https://www.countryflags.io/" + this.cc + "/flat/64.png";
+      document.getElementById('signup').hidden = true;
+      document.getElementById('signin').hidden = true;
     }
 };
 </script>

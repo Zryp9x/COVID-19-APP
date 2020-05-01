@@ -20,10 +20,10 @@
             <a @click="$router.push('/authors').catch(err =>{})" v-if="this.$route.path !== '/' && this.$route.path !== '/signup'">Authors</a>
           </li>
           <li> 
-            <a @click="$router.push('/').catch(err =>{})" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo' && this.$route.path !== '/news' && this.$route.path !== '/authors' && this.$route.path !== '/home'">Sign in</a>
+            <a @click="$router.push('/').catch(err =>{})" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo/x' && this.$route.path !== '/news' && this.$route.path !== '/authors' && this.$route.path !== '/home'" id="signin">Sign in</a>
           </li>
           <li> 
-            <a @click="$router.push('/signup').catch(err =>{})" style="border-right: 0;" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo' && this.$route.path !== '/news' && this.$route.path !== '/authors' && this.$route.path !== '/home'">Sign up</a>
+            <a @click="$router.push('/signup').catch(err =>{})" style="border-right: 0;" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo' && this.$route.path !== '/news' && this.$route.path !== '/authors' && this.$route.path !== '/home'" id="signup">Sign up</a>
           </li>
           <li> 
             <a @click="$router.push('/').catch(err =>{})" style="border-right: 0;" v-if="this.$route.path !== '/' && this.$route.path !== '/signup'"><logout></logout></a>
