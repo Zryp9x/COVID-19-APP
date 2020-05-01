@@ -3,7 +3,7 @@
         <div class="container">
           <div>
             <h2 style="text-align: center; margin-bottom: 20px;"><img style="width:70px; height:50px; align-item: center; border-radius: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/4/45/US-CDC-Logo.png"> CDC Online Newsroom</h2>
-            <div style="max-height: 340px; overflow-y: scroll; padding: 20px;border-style: groove; border-radius: 20px 10px 10px 20px;">
+            <div style="max-height: 340px; overflow: auto; padding: 20px;border-style: groove; border-radius: 20px 10px 10px 20px;">
               <div v-for="(item, index) in news.rss.channel[0].item" :key=index >  
                   <h4 style="text-align: center">{{news.rss.channel[0].item[index].title[0]}}</h4>
                   <p id="description" style="text-align: left">{{news.rss.channel[0].item[index].description[0]}}</p>
@@ -14,7 +14,7 @@
           </div><br><br>
           <div>
             <h2 style="text-align: center; margin-bottom: 20px;"><img style="width:70px; height:50px; align-item: center; border-radius: 10px;"src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_the_United_Nations.svg"> UN News</h2>
-            <div style="max-height: 340px; overflow-y: scroll; padding: 20px;border-style: groove; border-radius: 20px 10px 10px 20px;">
+            <div style="max-height: 340px; overflow: auto; padding: 20px;border-style: groove; border-radius: 20px 10px 10px 20px;">
               <div v-for="(item, index) in ednews.rss.channel[0].item" :key=index>  
                   <h4 style="text-align: center">{{ednews.rss.channel[0].item[index].title[0]}}</h4>
                   <p id="description" style="text-align: left">{{ednews.rss.channel[0].item[index].description[0]}}</p>
