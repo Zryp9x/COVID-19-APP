@@ -44,7 +44,7 @@ const routes = [
     {path: '/', name:'home', component: Home},
     {path: '/countries', name:'countries', component: Countries, meta: { requiresAuth: true }},
     {path: '/app', component: App, meta: { requiresAuth: true }},
-    {path: '/authors', component: Authors},
+    {path: '/authors', component: Authors, meta: { requiresAuth: true }},
     {path: '/CountryInfo/:CountryCode', component: CountryInfo},
     {path: '/info', component: Info, meta: { requiresAuth: true }},
     {path: '/news', component: News, meta: { requiresAuth: true }},
@@ -55,7 +55,6 @@ const routes = [
 const router = new VueRouter({
     routes,
     mode: 'hash',
-    mode: "history",
     base: process.env.BASE_URL,
 });
 
