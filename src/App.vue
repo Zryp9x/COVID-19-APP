@@ -6,8 +6,8 @@
         <button @click="$router.push('/info').catch(err =>{})" type="button" class="btn btn-outline-dark">Info</button>
         <button @click="$router.push('/news').catch(err =>{})" type="button" class="btn btn-outline-dark">News</button>
         <button @click="$router.push('/authors').catch(err =>{})" type="button" class="btn btn-outline-dark">Authors</button>
-        <button @click="$router.push('/').catch(err =>{})" type="button" class="btn btn-outline-dark">Login</button>
-        <button @click="$router.push('/register').catch(err =>{})" type="button" class="btn btn-outline-dark">Register</button>
+        <button @click="$router.push('/').catch(err =>{})" type="button" class="btn btn-outline-dark" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo' && this.$route.path !== '/news' && this.$route.path !== '/authors'">Login</button>
+        <button @click="$router.push('/register').catch(err =>{})" type="button" class="btn btn-outline-dark" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo' && this.$route.path !== '/news' && this.$route.path !== '/authors'">Register</button>
         <br><br>
     </nav>
     <router-view></router-view>
