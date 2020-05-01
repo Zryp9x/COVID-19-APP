@@ -16,34 +16,16 @@
               <h4 class="dataText">New recovered:</h4>
               <p class="data">{{countries.Global.NewRecovered}} <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Recycling_symbol2.svg/1024px-Recycling_symbol2.svg.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
           </div>
-          <div class="col-md-6">
-            <h3>Login</h3>
-            <form @submit.prevent="pressed">
-            <div class="login">
-            <input type="text" placeholder="login" v-model="email" />
-            </div>
-            <div class="password">
-            <input type="password" placeholder="password" v-model="password" />
-            </div>
-            <button>Login</button>
-            </form>
-            <div class="error" v-if="error">{{error.message}}</div>
-            </div>
     </div>
 </template>
 
 <script>
 import regeneratorRuntime from "regenerator-runtime";
-import * as firebase from "firebase/app";
-import "firebase/auth";
 
 export default {
   data () {
     return {
       countries: [],
-      email: "",
-      password: "",
-      error: ""
     }
   },
     async created () {
@@ -52,20 +34,6 @@ export default {
       .then((data) =>{
         this.countries = data;
       })
-    },
-      methods: {
-    pressed() {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
-        .then(data => {
-          console.log(data);
-          this.$router.replace({ name: "countries" });
-        })
-        .catch(error => {
-          this.error = error;
-        });
     }
-  }
   };
 </script>

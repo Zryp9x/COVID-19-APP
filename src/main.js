@@ -18,6 +18,7 @@ import News from './News.vue';
 import axios from "axios";
 import Register from './Register.vue';
 import Logout from './Logout.vue';
+import Login from './Login.vue';
 
 import * as firebase from 'firebase/app';
 import "firebase/auth";
@@ -41,11 +42,12 @@ const firebaseConfig = {
 Vue.use(VueRouter);
 
 const routes = [
-    {path: '/', name:'home', component: Home},
+    {path: '/', name:'login', component: Login},
+    {path: '/home', name:'home', component: Home, meta: { requiresAuth: true }},
     {path: '/countries', name:'countries', component: Countries, meta: { requiresAuth: true }},
-    {path: '/app', component: App, meta: { requiresAuth: true }},
+    {path: '/app', component: App},
     {path: '/authors', component: Authors, meta: { requiresAuth: true }},
-    {path: '/CountryInfo/:CountryCode', component: CountryInfo},
+    {path: '/CountryInfo/:CountryCode', component: CountryInfo, meta: { requiresAuth: true }},
     {path: '/info', component: Info, meta: { requiresAuth: true }},
     {path: '/news', component: News, meta: { requiresAuth: true }},
     {path: '/register', name:'register', component: Register},
