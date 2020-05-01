@@ -16,9 +16,9 @@ import Authors from './Authors.vue';
 import CountryInfo from './CountryInfo.vue';
 import News from './News.vue';
 import axios from "axios";
-import Register from './Register.vue';
+import Signup from './Signup.vue';
 import Logout from './Logout.vue';
-import Login from './Login.vue';
+import Signin from './Signin.vue';
 
 import * as firebase from 'firebase/app';
 import "firebase/auth";
@@ -42,7 +42,7 @@ const firebaseConfig = {
 Vue.use(VueRouter);
 
 const routes = [
-    {path: '/', name:'login', component: Login},
+    {path: '/', name:'signin', component: Signin},
     {path: '/home', name:'home', component: Home, meta: { requiresAuth: true }},
     {path: '/countries', name:'countries', component: Countries, meta: { requiresAuth: true }},
     {path: '/app', component: App},
@@ -50,7 +50,7 @@ const routes = [
     {path: '/CountryInfo/:CountryCode', component: CountryInfo, meta: { requiresAuth: true }},
     {path: '/info', component: Info, meta: { requiresAuth: true }},
     {path: '/news', component: News, meta: { requiresAuth: true }},
-    {path: '/register', name:'register', component: Register, meta: { requiresAuth: false }},
+    {path: '/signup', name:'signup', component: Signup, meta: { requiresAuth: false }},
     {path: '/logout', name:'logout', component: Logout}
 ];
 

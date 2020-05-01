@@ -31,7 +31,7 @@ export default {
         .auth()
         .signOut()
         .then(() => {
-          this.$router.replace({ name: "login" });
+          this.$router.replace({ name: "signin" });
         });
     }
   },
