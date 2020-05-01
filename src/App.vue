@@ -8,25 +8,25 @@
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu"> 
           <li> 
-            <button @click="$router.push('/countries').catch(err =>{})" type="button" class="btn btn-outline-dark" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'">Countries</button>
+            <a @click="$router.push('/countries').catch(err =>{})" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'">Countries</a>
           </li>
           <li> 
-            <button @click="$router.push('/info').catch(err =>{})" type="button" class="btn btn-outline-dark" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'">Info</button>
+            <a @click="$router.push('/info').catch(err =>{})" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'">Info</a>
           </li>
           <li> 
-            <button @click="$router.push('/news').catch(err =>{})" type="button" class="btn btn-outline-dark" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'">News</button>
+            <a @click="$router.push('/news').catch(err =>{})" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'">News</a>
           </li>
           <li> 
-            <button @click="$router.push('/authors').catch(err =>{})" type="button" class="btn btn-outline-dark" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'">Authors</button>
+            <a @click="$router.push('/authors').catch(err =>{})" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'">Authors</a>
           </li>
           <li> 
-            <button @click="$router.push('/').catch(err =>{})" type="button" class="btn btn-outline-dark" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo' && this.$route.path !== '/news' && this.$route.path !== '/authors' && this.$route.path !== '/home'">Login</button>
+            <a @click="$router.push('/').catch(err =>{})" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo' && this.$route.path !== '/news' && this.$route.path !== '/authors' && this.$route.path !== '/home'">Login</a>
           </li>
           <li> 
-            <button @click="$router.push('/register').catch(err =>{})" type="button" class="btn btn-outline-dark" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo' && this.$route.path !== '/news' && this.$route.path !== '/authors' && this.$route.path !== '/home'">Register</button>
+            <a @click="$router.push('/register').catch(err =>{})" style="margin-top: 15px; margin-right: 5px; border-right: 0;" v-if="this.$route.path !== '/countries' && this.$route.path !== '/info' && this.$route.path !== '/countryinfo' && this.$route.path !== '/news' && this.$route.path !== '/authors' && this.$route.path !== '/home'">Register</a>
           </li>
           <li> 
-            <button @click="$router.push('/').catch(err =>{})" type="button" class="btn btn-outline-dark" style="margin-top: 15px; margin-right: 5px;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'"><logout></logout></button>
+            <a @click="$router.push('/').catch(err =>{})" style="margin-top: 15px; margin-right: 5px; border-right: 0;" v-if="this.$route.path !== '/' && this.$route.path !== '/register'"><logout></logout></a>
           </li>
         </ul>
         </header>
