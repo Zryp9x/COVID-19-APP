@@ -22,7 +22,6 @@ import Signin from './Signin.vue';
 
 import * as firebase from 'firebase/app';
 import "firebase/auth";
-import './registerServiceWorker'
 
 Vue.prototype.$axios = axios;
 
@@ -36,8 +35,8 @@ const firebaseConfig = {
     appId: "1:296919306217:web:9fc13679158317b1090578",
     measurementId: "G-435Q7EL7S8"
   };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 
 Vue.use(VueRouter);
@@ -72,16 +71,16 @@ router.beforeEach((to, from, next) => {
     }
   });
 
-router.beforeEach((to, from, next) => {
-  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-  const isAuthenticated = firebase.auth().currentUser;
-  console.log("isauthenticated", isAuthenticated);
-  if (!requiresAuth && isAuthenticated) {
-    next("/home");
-  } else {
-    next();
-  }
-});
+  router.beforeEach((to, from, next) => {
+    const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+    const isAuthenticated = firebase.auth().currentUser;
+    console.log("isauthenticated", isAuthenticated);
+    if (!requiresAuth && isAuthenticated) {
+      next("/home");
+    } else {
+      next();
+    }
+  });
 
 export default router;
 
