@@ -12,7 +12,7 @@
               <h4 class="dataText">New confirmed:</h4>
               <p class="data">{{countries.Global.NewConfirmed}} <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Green-Up-Arrow.svg/807px-Green-Up-Arrow.svg.png" width="40px" height="35px" style="margin-bottom:10px;"></p>
               <h4 class="dataText">New deaths:</h4>
-              <p class="data">{{countries.Global.NewDeaths}} <img class="img" src="https://gifyagusi.pl/img/2019/10/24/obrazek-gif/zaloba/Kir%20-%20przezroczysta%20żałobna%20wstążka%20bez%20tła.png" width="40px" height="35px" style="margin-bottom:10px;"></p>
+              <p class="data">{{countries.Global.NewDeaths}} <img class="img" src="https://cdn.pixabay.com/photo/2016/12/18/11/05/black-1915459_960_720.png" width="40px" height="35px" style="margin-bottom:10px;"></p>
               <h4 class="dataText">New recovered:</h4>
               <p class="data">{{countries.Global.NewRecovered}} <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Recycling_symbol2.svg/1024px-Recycling_symbol2.svg.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
           </div>
@@ -21,7 +21,6 @@
 
 <script>
 import regeneratorRuntime from "regenerator-runtime";
-
 export default {
   data () {
     return {

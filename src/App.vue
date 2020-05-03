@@ -40,7 +40,7 @@
 
 <script>
 
-import Logout from './Logout';
+import Logout from './components/Logout';
 export default {
         components: {'logout': Logout}
 }

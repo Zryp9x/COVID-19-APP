@@ -27,7 +27,6 @@
 import regeneratorRuntime from "regenerator-runtime";
 import * as firebase from "firebase/app";
 import "firebase/auth";
-
 export default {
   data () {
     return {
