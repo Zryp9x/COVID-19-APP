@@ -1,7 +1,7 @@
 <template>
         <div>
-          <h2 class="texth">Current country data all around the world!</h2>
-          <h3 class="texth">Click on country name to see specified data for each country.</h3><br><br>
+           <h1 class="display-4" style="text-align:center; font-size: 45px;">Current country data all around the world!</h1>
+           <h2 class="display-4" style="text-align:center; font-size: 25px;">Click on country name to see specified data for each country.</h2><br><br>
         <table id="tab" class="display">
             <thead>
                 <tr scope="row">

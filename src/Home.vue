@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6" id="firstColumnHome">
               <h4 class="dataText">Total confirmed:</h4>
               <p class="data">{{countries.Global.TotalConfirmed}} <img class="img" src="https://www.zovirax.pl/images/el1.png" width="40px" height="40px" style="margin-bottom:10px;"></p>
               <h4 class="dataText">Total deaths:</h4>

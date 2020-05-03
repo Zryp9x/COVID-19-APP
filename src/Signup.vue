@@ -1,7 +1,10 @@
 <template>
     <div class="row" style="margin:auto; width: 300px;">
       <form @submit.prevent="pressed">
-              <h3 class="display-4" style="text-align:center;">Sign up</h3><br>
+                <h1 class="display-4" style="text-align:center; font-size: 45px;">COVID 19 APP</h1>
+                <h1 class="display-4" style="text-align:center; font-size: 30px;">Coronavirus info in one place</h1>
+                <hr>
+                <h1 class="display-4" style="text-align:center;">Sign up</h1><br>
                 <div class="form-group">
                 <label for="exampleInputEmail2">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" v-model="email"  style="width: 300px;">

@@ -168,7 +168,6 @@ body {
     top: 0;
   }
   
-  /* 48em = 768px */
   
   @media (min-width: 48em) {
     .header li {
@@ -186,6 +185,13 @@ body {
     }
     .header .menu-icon {
       display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    #firstColumnHome {
+      margin-bottom: 50px ;
     }
   }
   
@@ -218,3 +224,4 @@ body {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #8a8a8a;
+
