@@ -1,7 +1,7 @@
 # COVID-19 APP
 
-> A Vue.js project
-https://zryp9x.github.io/COVID-19-APP/#/
+> COVID-19-APP Project's page
+https://zryp9x.github.io/COVID-19-APP/
 
 ## Build Setup
 
@@ -9,8 +9,8 @@ https://zryp9x.github.io/COVID-19-APP/#/
 #install vue-router
 npm install vue-router
 
-#install chartjs
-npm install vue-chartjs chart.js axios moment bootstrap --save
+## Install chart.js, axios, moment, bootstrap, firebase and others
+npm install vue-chartjs chart.js axios moment bootstrap regenerator-runtime mdbvue xml-js firebase --save
 
 # build for production with minification
 npm run build
@@ -23,5 +23,3 @@ npm run dev
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-## Install necessary files
-npm i regenerator-runtime axios moment vue-chartjs mdbvue xml-js
