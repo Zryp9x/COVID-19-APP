@@ -1,24 +1,27 @@
-# covid-19
+# COVID-19 APP
 
-## Project setup
-```
-npm install
-```
+> A Vue.js project
+https://zryp9x.github.io/COVID-19-APP/#/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Build Setup
 
-### Compiles and minifies for production
-```
+``` bash
+#install vue-router
+npm install vue-router
+
+#install chartjs
+npm install vue-chartjs chart.js axios moment bootstrap --save
+
+# build for production with minification
 npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+# install dependencies
+npm install
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# serve with hot reload at localhost:8080
+npm run dev
+
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Install necessary files
+npm i regenerator-runtime axios moment vue-chartjs mdbvue xml-js
